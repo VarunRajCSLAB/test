@@ -1,4 +1,0 @@
-Enter FOL:
-food(x) => likes(roshan,x)
-The CNF form of the given FOL is: 
-~food(x) V likes(roshan,x)
