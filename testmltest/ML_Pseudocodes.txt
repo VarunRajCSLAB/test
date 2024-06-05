@@ -1,0 +1,136 @@
+
+
+- Decision tree(iD3): [Classify whether an email is spam or not]
+1. Load the email dataset.
+2. Preprocess the data (convert text to numerical features).
+3. Split the dataset into training and testing sets.
+4. Define the function to calculate entropy.
+5. Define the function to calculate information gain.
+6. Build the decision tree:
+    a. If all examples are of the same class, return the class label.
+    b. If there are no more features to split, return the most common class.
+    c. Calculate information gain for each feature.
+    d. Choose the feature with the highest information gain.
+    e. Split the dataset on the chosen feature and repeat steps a-d for each subset.
+7. Use the tree to classify new emails.
+8. Evaluate the model using the testing set.
+
+- linear regression [Predict the price of a house.]
+1. Load the house dataset.
+2. Preprocess the data (handle missing values, normalize if needed).
+3. Split the dataset into training and testing sets.
+4. Initialize weights and bias.
+5. Define the cost function (mean squared error).
+6. Define the gradient descent algorithm:
+    a. Calculate predictions.
+    b. Calculate the error.
+    c. Update weights and bias.
+7. Train the model using the training set.
+8. Use the model to predict house prices on the testing set.
+9. Evaluate the model using metrics like RMSE.
+
+- multiple linear regression: [same]
+1. Same as Linear Regression but with multiple features.
+2. The model includes multiple weights, one for each feature.
+
+
+-logistic regression for classification: [Predict whether a student will pass or fail an exam]
+1. Load the student dataset.
+2. Preprocess the data (handle missing values, normalize if needed).
+3. Split the dataset into training and testing sets.
+4. Initialize weights and bias.
+5. Define the sigmoid function.
+6. Define the cost function (cross-entropy loss).
+7. Define the gradient descent algorithm:
+    a. Calculate predictions using the sigmoid function.
+    b. Calculate the error.
+    c. Update weights and bias.
+8. Train the model using the training set.
+9. Use the model to predict pass/fail on the testing set.
+10. Evaluate the model using accuracy.
+
+
+-KNN Classification: [Classify different types of flowers]
+1. Load the Iris dataset.
+2. Preprocess the data (normalize if needed).
+3. Split the dataset into training and testing sets.
+4. Define the distance metric (e.g., Euclidean distance).
+5. For each test sample:
+    a. Calculate the distance to all training samples.
+    b. Sort the distances.
+    c. Choose the k nearest neighbors.
+    d. Assign the class based on the majority vote of the k neighbors.
+6. Evaluate the model using accuracy.
+
+
+- SVM for classification: [Classify handwritten digits.]
+1. Load the MNIST dataset.
+2. Preprocess the data (flatten images, normalize).
+3. Split the dataset into training and testing sets.
+4. Choose a kernel function (e.g., linear, polynomial, RBF).
+5. Train the SVM model using the training set.
+6. Use the model to predict digit classes on the testing set.
+7. Evaluate the model using accuracy.
+
+
+- random forest ensemble: [Predict the type of wine]
+1. Load the wine dataset.
+2. Preprocess the data (handle missing values, normalize if needed).
+3. Split the dataset into training and testing sets.
+4. For each tree in the forest:
+    a. Randomly select a subset of features.
+    b. Randomly sample the data with replacement.
+    c. Train a decision tree on the sampled data.
+5. Aggregate the predictions from all trees (majority vote for classification).
+6. Evaluate the model using accuracy.
+
+
+-boosting: [Predict if a customer will churn.]
+1. Load the customer churn dataset.
+2. Preprocess the data (handle missing values, normalize if needed).
+3. Split the dataset into training and testing sets.
+4. Initialize sample weights equally.
+5. For each iteration:
+    a. Train a weak classifier on the data.
+    b. Calculate the classifier's error rate.
+    c. Update the sample weights based on the error.
+    d. Increase the influence of incorrectly classified samples.
+6. Aggregate the predictions from all classifiers (weighted vote).
+7. Evaluate the model using accuracy.
+
+
+- k means clustering: [Cluster customers based on purchase history]
+1. Load the customer purchase dataset from the CSV file.
+2. Preprocess the data (normalize if needed).
+3. Choose the number of clusters (k).
+4. Initialize k centroids randomly.
+5. Repeat until convergence:
+    a. Assign each data point to the nearest centroid.
+    b. Recalculate the centroids based on the assignments.
+6. Evaluate the clustering using metrics like silhouette score.
+
+
+- PCA: [Reduce features in a gene expression dataset.]
+1. Load the gene expression dataset.
+2. Standardize the data (mean=0, variance=1).
+3. Calculate the covariance matrix.
+4. Calculate eigenvalues and eigenvectors of the covariance matrix.
+5. Sort eigenvectors by eigenvalues in descending order.
+6. Choose the top k eigenvectors to form the projection matrix.
+7. Transform the data using the projection matrix.
+8. Evaluate the reduction by visualizing the transformed data.
+
+
+- ANN: [Predict whether a person will buy a product.]
+1. Load the customer dataset.
+2. Preprocess the data (normalize if needed).
+3. Split the dataset into training and testing sets.
+4. Define the network architecture (input layer, hidden layers, output layer).
+5. Initialize weights and biases.
+6. Define the activation function (e.g., ReLU, sigmoid).
+7. Define the cost function (cross-entropy for classification).
+8. Implement forward propagation.
+9. Implement backpropagation to update weights and biases.
+10. Train the model using the training set.
+11. Use the model to predict on the testing set.
+12. Evaluate the model using accuracy.
